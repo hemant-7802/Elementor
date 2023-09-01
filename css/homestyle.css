@@ -1,0 +1,733 @@
+:root{
+    --navbarcolor: rgb(255, 188, 225);
+    --buttonhoverclr: rgb(209, 81, 152);
+}
+*{
+    margin: 0%;
+    padding: 0%;
+    box-sizing: border-box;
+    font-family: sans-serif;
+    & .navbar{
+        height: 90px;
+        width: 100% ;
+        position: fixed;
+        z-index: 2;
+        display: grid;
+        grid-template-columns: 20% 60% 20%;
+        background: rgb(255,100,169);
+        background: linear-gradient(90deg, rgba(255,100,169,1) 0%, rgba(210,0,117,1) 100%);
+        & .logo{
+            height: 100%;
+            width: 100%;
+            background-image: url(../images/ele-logo.png);
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: 70%;
+            + .menu{
+                height: 100%;
+                & ul{
+                    height: 100%;
+                    list-style: none;
+                    display: inline-flex;
+                    padding-top: 37px;
+                    & li{
+                        margin-inline: 20px;
+                        font-size: 15px;
+                        text-transform: capitalize;
+                        font-weight: bold;
+                        position: relative;
+                        & ul{
+                            position: absolute;
+                            z-index: 1;
+                            display: none;
+                            margin-top: 15px;
+                            width: 350px;
+                            height: auto;
+                            background-color: rgb(255, 255, 255);
+                            border: 1px solid black;
+                            border-radius: 10px;
+                            box-shadow: 3px 3px black;
+                            & li{
+                                font-size: 18px;
+                                line-height: 60px;
+                                color: black;
+                                font-weight: normal;
+                                & i{
+                                    margin-left: 10px;
+                                    + p{
+                                        font-weight: normal;
+                                        font-size: 14px;
+                                        line-height: 25px;
+                                    }
+                                }
+                            }
+                            & li:hover p{
+                                color: black;
+                            }
+                        }
+                    }
+                    & li:hover{
+                        color: darkred;
+                        cursor: pointer;
+                        transition-duration: 300ms;
+                    }
+                    & li:hover ul{
+                        display: block;
+                        transition-duration: 200ms;
+                    }
+                    & li:hover ul li:hover{
+                        background-color: rgb(255, 212, 255);
+                        transition-duration: 200ms;
+                        width: 100%;
+                        margin-left: 0px;
+                        padding-left: 15px;
+                    }
+                }
+                + .actions{
+                    & .button{
+                        border: none;
+                        font-size: 17px;
+                        font-weight: bold;
+                        text-transform: uppercase;
+                        cursor: pointer;
+                    }
+                    & .login{
+                        background-color: transparent;
+                        margin-right: 7px;
+                    }
+                    & .login:hover{
+                        color: darkred;
+                    }
+                    & .getstarted{
+                        background-color: darkred;
+                        color: white;
+                        padding: 35px 50px;
+                    }
+                    & .getstarted:hover{
+                        background-color: var(--buttonhoverclr);
+                        transition-duration: 200ms;
+                    }
+                }
+            }
+        }
+        + .heropage{
+            height: 800px;
+            background-color: var(--navbarcolor);
+            text-align: center;
+            padding-top: 200px;
+            & h1{
+                font-family: serif;
+                font-size: 75px;
+                background-image: url(../images/p2.jpg);
+                background-position: center;
+                -webkit-background-clip: text;
+                color: transparent;
+                padding-bottom: 20px;
+                animation-name: slider;
+                animation-duration: 2s;
+                + p{
+                    font-size: 19px;
+                    padding-bottom: 50px;
+                    + button{
+                        padding: 14px 45px;
+                        border: none;
+                        background-color: darkred;
+                        color: white;
+                        text-transform: capitalize;
+                        font-size: 16px;
+                        cursor: pointer;
+                        margin-bottom: 70px;
+                        + div{
+                            height: 600px;
+                            & i{
+                                font-size: 30px;
+                                color: darkred;
+                                position: relative;
+                                top: -40px;
+                                left: -516px;
+                            }
+                        }
+                    }
+                    + button:hover{
+                        background-color: var(--buttonhoverclr);
+                    }
+                }
+            }
+            + .cards{
+                height: 400px;
+                width: 90%;
+                margin-top: 400px;
+                display: flex;
+                justify-content: space-evenly;
+                align-items: center;
+                margin-left: 72px;
+                & .card{
+                    height: 100%;
+                    width: 280px;
+                    & h3{
+                        padding-top: 70px;
+                        padding-bottom: 15px;
+                    }
+                }
+                + .frame{
+                    height: 800px;
+                    display: flex;
+                    justify-content: space-evenly;
+                    overflow: hidden;
+                    & .content{
+                        height: 750px;
+                        width: 50%;
+                        & h1{
+                            font-size: 50px;
+                            padding-top: 60px;
+                            padding-bottom: 8px;
+                            font-family: serif;
+                            + p{
+                                font-size: 16px;
+                                line-height: 28px;
+                                + .grid{
+                                    height: 200px;
+                                    display: grid;
+                                    grid-template-columns: 47% 47%;
+                                    grid-template-rows: 30px 30px 30px;
+                                    grid-column-gap: 25px;
+                                    grid-row-gap: 20px;
+                                    justify-content: center;
+                                    padding-top: 15px;
+                                    & .t{
+                                        & h4{
+                                            padding-top: 20px;
+                                            font-size: 15px;
+                                            & i{
+                                                border: 1px solid white;
+                                                border-radius: 100%;
+                                                padding: 7px;
+                                                background-color: rgb(233, 233, 233);
+                                            }
+                                        }
+                                    }
+                                    + button{
+                                        border: none;
+                                        margin: 30px 0px 0px 0px;
+                                        padding: 15px 45px;
+                                        text-transform: capitalize;
+                                        font-size: 18px;
+                                        background-color: transparent;
+                                        border: 1px solid darkblue;
+                                        color: darkblue ;
+                                        & i{
+                                            padding-left: 10px;
+                                        }
+                                    }
+                                    + button:hover{
+                                        background-color: darkblue;
+                                        color: white;
+                                        cursor: pointer;
+                                        transition-duration: 400ms;
+                                    }
+                                }
+                            }
+                        }
+                        + .image{
+                            margin-top: 2%;
+                            height: 550px;
+                            width: 40%;
+                            background-color: darkgreen;
+                            background-image: url(../images/Domain.svg) , url(../images/Speed.svg), url(../images/traffic.svg) , url(../images/backups.svg),  url(../images/Group-10881830.png);
+                            background-repeat: no-repeat;
+                            background-size: 35% , 20%, 30% , 25% , 85%;
+                            background-position: 50px 35px, 350px 80px, 60px 340px , 330px 370px , right;
+                            animation-name: image;
+                            animation-duration: 1.5s;
+                            scroll-behavior:smooth ;
+                        }
+                    }
+                    + .creation{
+                        height: 750px;
+                        text-align: center;
+                        & h1{
+                            font-size: 50px;
+                            padding-bottom: 10px;
+                            + p{
+                                font-size: 20px;
+                                + .content2{
+                                    margin-top: 50px;
+                                    height: 550px;
+                                    display: flex;
+                                    justify-content: space-evenly;
+                                    & .text{
+                                        width: 30%;
+                                        font-size: 26px;
+                                        & .first{
+                                            color: palevioletred;
+                                            padding-top: 20px;
+                                            +.ul{
+                                                list-style: none;
+                                                padding-top: 20px;
+                                                padding-left: 70px;
+                                                & li{
+                                                    text-align:start;
+                                                    line-height: 60px;
+                                                    font-size: 24px;
+                                                }
+                                                & li:hover{
+                                                    color: palevioletred;
+                                                    transition-duration: .90s;
+                                                    cursor: pointer;
+                                                }
+                                            }
+                                        }
+                                        + .image2{
+                                            height: 590px;
+                                            width: 65%;
+                                            background-image: url(../images/Group-1087165.png);
+                                            background-position: center;
+                                            background-repeat: no-repeat;
+                                            background-size: contain;
+                                            & p{
+                                                margin-top: 510px;
+                                                margin-left: -530px;
+                                                font-size: 17px;
+                                                text-transform:uppercase;
+                                                & span{
+                                                    font-weight: bold;
+                                                }
+                                            }
+                                            & p::selection {
+                                                color: orange;
+                                            }
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                        + .blocks{
+                            height: 400px;
+                            display: flex;
+                            justify-content: space-evenly;
+                            & .block{
+                                padding-top: 40px;
+                                height: 200px;
+                                width: 350px;
+                                & img{
+                                    margin-top: -40px;
+                                    + h2{
+                                        padding-bottom: 20px;
+                                        + p{
+                                            line-height: 25px;
+                                        }
+                                    }
+                                }
+                            }
+                            + .man1{
+                                margin-top: 50px;
+                                height: 600px;
+                                background-color: rgb(177, 15, 64);
+                                display: flex;
+                                justify-content: space-evenly;
+                                align-items: center;
+                                & .image{
+                                    width: 40%;
+                                    + .content{
+                                        color: white;
+                                        height: 100%;
+                                        width: 58%;
+                                        padding-top: 200px;
+                                        & .p1{
+                                            font-size: 28px;
+                                            padding-bottom: 20px;
+                                            + h2{
+                                                font-size: 23px;
+                                                font-family: serif;
+                                                padding-bottom: 20px;
+                                                + .p2{
+                                                    font-size: 20px;
+                                                }
+                                            }
+                                        }
+                                    }
+                                }
+                                + .skills{
+                                    height: 1000px;
+                                    display: flex;
+                                    justify-content: space-evenly;
+                                    & .content{
+                                        width: 40%;
+                                        padding-top: 150px;
+                                        padding-left: 80px;
+                                        & .p1{
+                                            font-weight: bold;
+                                            padding-bottom: 25px;
+                                            + h1{
+                                                font-size: 45px;
+                                                padding-bottom: 15px;
+                                                + .p2{
+                                                    font-size: 17px;
+                                                }
+                                            }
+                                        }
+                                        + .images{
+                                            padding-top: 80px;
+                                            width: 53%;
+                                            display: grid;
+                                            grid-template-columns: 50% 50%;
+                                            grid-template-rows: 45% 45%;
+                                            & .pic{
+                                                padding-left: 50px;
+                                                & img{
+                                                    + h2{
+                                                        padding-top: 10px;
+                                                        font-size: 20px;
+                                                        padding-bottom: 20px;
+                                                        + p{
+                                                            font-size: 16px;
+                                                            padding-bottom: 20px;
+                                                            + button{
+                                                                border: none;
+                                                                background-color: transparent;
+                                                                padding: 10px 30px 10px 0px;
+                                                                font-size: 19px;
+                                                                cursor: pointer;
+                                                                color: var(--buttonhoverclr);
+                                                                & i{
+                                                                    padding-left: 10px;
+                                                                }
+                                                            }
+                                                            + .b1:hover::after{
+                                                                content: "_____________";
+                                                                display: block;
+                                                            }
+                                                            + .b2:hover::after{
+                                                                content: "__________________";
+                                                                display: block;
+                                                            }
+                                                            + .b3:hover::after{
+                                                                content: "____________";
+                                                                display: block;
+                                                            }
+                                                            + .b4:hover::after{
+                                                                content: "____________";
+                                                                display: block;
+                                                            }
+                                                        }
+                                                    }
+                                                }
+                                            }
+                                        }
+                                    }
+                                    + .man2{
+                                        height: 600px;
+                                        background-color: rgb(175, 176, 238);
+                                        display: flex;
+                                        justify-content: space-evenly;
+                                        align-items: center;
+                                        & .image{
+                                            width: 40%;
+                                            + .content{
+                                                height: 100%;
+                                                width: 58%;
+                                                padding-top: 200px;
+                                                & .p1{
+                                                    font-size: 28px;
+                                                    padding-bottom: 20px;
+                                                    + h2{
+                                                        font-size: 23px;
+                                                        font-family: serif;
+                                                        padding-bottom: 20px;
+                                                        + .p2{
+                                                            font-size: 20px;
+                                                        }
+                                                    }
+                                                }
+                                            }
+                                        }
+                                        + .frame2{
+                                            padding-top: 80px;
+                                            height: 700px;
+                                            display: flex;
+                                            justify-content: space-evenly;
+                                            & .text{
+                                                width: 58%;
+                                                padding: 150px 0px 0px 60px;
+                                                & h5{
+                                                    text-transform: uppercase;
+                                                    font-size: 17px;
+                                                    padding-bottom: 20px;
+                                                    + h1{
+                                                        font-size: 50px;
+                                                        padding-bottom: 20px;
+                                                        + p{
+                                                            font-size: 20px;
+                                                            padding-bottom: 30px;
+                                                            + button{
+                                                                background-color: transparent;
+                                                                color: darkblue;
+                                                                border: none;
+                                                                border: 1px solid darkblue;
+                                                                font-size: 20px;
+                                                                text-transform: capitalize;
+                                                                padding: 10px 30px;
+                                                                cursor: pointer;
+                                                                & i{
+                                                                    padding-left: 10px;
+                                                                }
+                                                            }
+                                                            + button:hover{
+                                                                background-color: darkblue;
+                                                                color: white;
+                                                                transition-duration: 200ms;
+                                                            }
+                                                        }
+                                                    }
+                                                }
+                                            }
+                                            + .countdown{
+                                                height: 300px;
+                                                display: flex;
+                                                justify-content: space-evenly;
+                                                & .count1{
+                                                    width: 24%;
+                                                    text-align: center;
+                                                    & h1{
+                                                        padding-top: 80px;
+                                                        font-size: 80px;
+                                                        + p{
+                                                            padding-top: 20px;
+                                                            font-size: 20px;
+                                                        }
+                                                    }
+                                                }
+                                                + .frame3{
+                                                    padding-top: 20px;
+                                                    height: 700px;
+                                                    display: flex;
+                                                    overflow: hidden;
+                                                    justify-content: space-evenly;
+                                                    & .text{
+                                                        width: 50%;
+                                                        padding-top: 70px;
+                                                        & h1{
+                                                            font-size: 40px;
+                                                            padding-left: 50px;
+                                                            + .textbox{
+                                                                position: absolute;
+                                                                z-index: 1;
+                                                                margin-top: 80px;
+                                                                margin-left: 50px;
+                                                                height: 350px;
+                                                                width: 900px;
+                                                                display: grid;
+                                                                grid-template-columns: 45% 45%;
+                                                                grid-column-gap: 8%;
+                                                                align-items: center;
+                                                                & .box{
+                                                                    height: 100%;
+                                                                    width: 100%;
+                                                                    background-color: rgb(162, 249, 255);
+                                                                    padding: 50px;
+                                                                    overflow: hidden;
+                                                                    & h2{
+                                                                        font-size: 20px;
+                                                                        padding-bottom: 20px;
+                                                                        + p{
+                                                                            line-height: 27px;
+                                                                            font-size: 17px;
+                                                                            padding-bottom: 40px;
+                                                                            + button{
+                                                                                background-color: transparent;
+                                                                                border: none;
+                                                                                font-size: 20px;
+                                                                                cursor: pointer;
+                                                                                & i{
+                                                                                    padding-left: 10px;
+                                                                                }
+                                                                            }
+                                                                            + .b:hover::after
+                                                                            {
+                                                                                display: block;
+                                                                                position: relative;
+                                                                                top: -10px;
+                                                                            }
+                                                                            + .b1:hover::after
+                                                                            {
+                                                                                content: "________________";
+                                                                            }
+                                                                            + .b2:hover::after
+                                                                            {
+                                                                                content: "____________";
+                                                                            }
+                                                                        }
+                                                                    }
+                                                                }
+                                                            }
+                                                        }
+                                                        + .image{
+                                                            padding-top: 30px;
+                                                            width: 40%;
+                                                        }
+                                                    }
+                                                    + .frame4{
+                                                        height: 600px;
+                                                        background-color: rgb(255, 198, 217);
+                                                        display: flex;
+                                                        justify-content: space-evenly;
+                                                        align-items: center;
+                                                        & .text{
+                                                            width: 40%;
+                                                            padding-left: 80px;
+                                                            & h1{
+                                                                font-size: 45px;
+                                                                padding-bottom: 20px;
+                                                                + p{
+                                                                    font-size: 18px;
+                                                                    padding-bottom: 30px;
+                                                                    + button{
+                                                                        background-color: transparent;
+                                                                        border: none;
+                                                                        text-transform: capitalize;
+                                                                        border: 1px solid darkblue;
+                                                                        color: darkblue;
+                                                                        font-size: 20px;
+                                                                        padding: 10px 30px;
+                                                                        cursor: pointer;
+                                                                        & i{
+                                                                            padding-left: 10px;
+                                                                        }
+                                                                    }
+                                                                    + button:hover{
+                                                                        background-color: darkblue;
+                                                                        color: white;
+                                                                        transition-duration: 200ms;
+                                                                    }
+                                                                }
+                                                            }
+                                                        }
+                                                        + .footer{
+                                                            height: 120vh;
+                                                            background-color: rgb(133, 14, 50);
+                                                            display: flex;
+                                                            justify-content: space-evenly;
+                                                            color: white;
+                                                            & .f{
+                                                                padding-top: 70px;
+                                                                width: 200px;
+                                                                width: fit-content;
+                                                                & h1{
+                                                                    font-size: 22px;
+                                                                    font-family: serif;
+                                                                    padding-bottom: 30px;
+                                                                    cursor: pointer;
+                                                                    color: rgb(255, 117, 232);
+                                                                    ~ p{
+                                                                        line-height: 50px;
+                                                                        cursor: pointer;
+                                                                        font-size: 15px;
+                                                                    }
+                                                                }
+                                                            }
+                                                            & .f2{
+                                                                & .h2{
+                                                                    padding-top: 50px;
+                                                                }
+                                                            }
+                                                            & .f4{
+                                                                width: 260px;
+                                                            }
+                                                            & .f5{
+                                                                width: 300px;
+                                                                & h1{
+                                                                    + p{
+                                                                        width: auto;
+                                                                        line-height: 21px;
+                                                                        font-size: 17px;
+                                                                        padding-bottom: 60px;
+                                                                        + h1{
+                                                                            + form{
+                                                                                & .i1{
+                                                                                    height: 40px;
+                                                                                    width: 200px;
+                                                                                    background-color: transparent;
+                                                                                    border: none;
+                                                                                    border: 1px solid white;
+                                                                                    outline: none;
+                                                                                    color: rgb(255, 255, 255);
+                                                                                    padding: 10px 0px 10px 20px;
+                                                                                    + .button{
+                                                                                        height: 40px;
+                                                                                        border: none;
+                                                                                        background-color: violet;
+                                                                                        width: 90px;
+                                                                                        color: darkred;
+                                                                                        cursor: pointer;
+                                                                                        margin-left: -6px;
+                                                                                        border-top: 1px solid white;
+                                                                                        border-right: 1px solid white;
+                                                                                        border-bottom: 1px solid white;
+                                                                                    }
+                                                                                    + .button:hover{
+                                                                                        background-color: rgb(253, 168, 253);
+                                                                                    }
+                                                                                }
+                                                                                + p{
+                                                                                    line-height: 22px;
+                                                                                    padding-top: 25px;
+                                                                                    font-size: 13px;
+                                                                                    & span{
+                                                                                        font-weight: bold;
+                                                                                        cursor: pointer;
+                                                                                        color: violet;
+                                                                                    }
+                                                                                    + h4{
+                                                                                        padding-top: 50px;
+                                                                                        font-size: 20px;
+                                                                                        padding-bottom: 30px;
+                                                                                        & i{
+                                                                                            margin-inline: 4px;
+                                                                                        }
+                                                                                        + h3{
+                                                                                            font-size: 12px;
+                                                                                        }
+                                                                                    }
+                                                                                }
+                                                                            }
+                                                                        }
+                                                                    }
+                                                                }
+                                                            }
+                                                        }
+                                                    }
+                                                }
+                                            }
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+@keyframes slider{
+    0%{
+        position: relative;
+        left: 0px;
+        top: -400px;
+    }
+    100%{
+        position: relative;
+        left: 0px;
+        top: 0px;
+    }
+}
+@keyframes image{
+    0%{
+        position: relative;
+        left: 700px;
+    }
+    100%{
+        position: relative;
+        left: 0px;
+    }
+}
