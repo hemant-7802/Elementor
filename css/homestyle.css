@@ -253,6 +253,7 @@
                                 + .content2{
                                     margin-top: 50px;
                                     height: 550px;
+                                    width: 98%;
                                     display: flex;
                                     justify-content: space-evenly;
                                     & .text{
@@ -261,6 +262,8 @@
                                         & .first{
                                             color: palevioletred;
                                             padding-top: 20px;
+                                            user-select: none;
+                                            cursor: pointer;
                                             +.ul{
                                                 list-style: none;
                                                 padding-top: 20px;
@@ -269,6 +272,7 @@
                                                     text-align:start;
                                                     line-height: 60px;
                                                     font-size: 24px;
+                                                    user-select: none;
                                                 }
                                                 & li:hover{
                                                     color: palevioletred;
@@ -279,18 +283,19 @@
                                         }
                                         + .image2{
                                             height: 590px;
-                                            width: 65%;
-                                            background-image: url(../images/Group-1087165.png);
-                                            background-position: center;
-                                            background-repeat: no-repeat;
-                                            background-size: contain;
+                                            width: 59.6%;
+                                            transform: translate(0px,30px);
                                             & p{
-                                                margin-top: 510px;
-                                                margin-left: -530px;
-                                                font-size: 17px;
+                                                transform: translate(0px,-90px);
+                                                font-size: 16px;
                                                 text-transform:uppercase;
-                                                & span{
+                                                text-align: start;
+                                                & .headding{
                                                     font-weight: bold;
+                                                    + .para{
+                                                        color: rgb(114, 114, 114);
+                                                        font-weight: bold;
+                                                    }
                                                 }
                                             }
                                             & p::selection {
