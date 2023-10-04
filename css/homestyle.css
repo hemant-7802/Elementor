@@ -327,7 +327,7 @@
                             + .man1{
                                 margin-top: 50px;
                                 height: 600px;
-                                background-color: rgb(177, 15, 64);
+                                background-color: rgb(145, 13, 52);
                                 display: flex;
                                 justify-content: space-evenly;
                                 align-items: center;
@@ -337,14 +337,18 @@
                                         color: white;
                                         height: 100%;
                                         width: 58%;
-                                        padding-top: 200px;
+                                        padding-top: 130px;
+                                        & i{
+                                            font-size: 50px;
+                                            padding-bottom: 10px;
+                                        }
                                         & .p1{
                                             font-size: 28px;
                                             padding-bottom: 20px;
+                                            line-height: 45px;
                                             + h2{
-                                                font-size: 23px;
+                                                font-size: 21px;
                                                 font-family: serif;
-                                                padding-bottom: 20px;
                                                 + .p2{
                                                     font-size: 20px;
                                                 }
@@ -431,14 +435,18 @@
                                             + .content{
                                                 height: 100%;
                                                 width: 58%;
-                                                padding-top: 200px;
+                                                padding-top: 120px;
+                                                & i{
+                                                    font-size: 50px;
+                                                    padding-bottom: 10px;
+                                                }
                                                 & .p1{
                                                     font-size: 28px;
                                                     padding-bottom: 20px;
+                                                    line-height: 43px;
                                                     + h2{
-                                                        font-size: 23px;
+                                                        font-size: 21px;
                                                         font-family: serif;
-                                                        padding-bottom: 20px;
                                                         + .p2{
                                                             font-size: 20px;
                                                         }
