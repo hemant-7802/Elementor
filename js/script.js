@@ -47,5 +47,6 @@ function img7()
 function main()
 {
     image.setAttribute("src","images/Group-1087165.png")
-    span.innerText="TRELEMENTS"
+    span[0].innerText="TRELEMENTS"
+    span[1].innerText=" BY LEVENTE FIGNAR"
 }
